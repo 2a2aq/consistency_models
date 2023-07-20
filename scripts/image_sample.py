@@ -26,7 +26,7 @@ def main():
     args = create_argparser().parse_args()
 
     dist_util.setup_dist()
-    logger.configure()
+    logger.configure(dir="./image/")
 
     if "consistency" in args.training_mode:
         distillation = True
